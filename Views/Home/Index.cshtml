@@ -1,0 +1,38 @@
+﻿@model Survey
+
+<h1>Dojo Survey</h1>
+<form asp-action="Method" asp-controller="Home" method="post">
+
+    <span asp-validation-for="Name"></span>
+    <br>
+    <label asp-for="Name"></label>
+    <input asp-for="Name">
+
+    <span asp-validation-for="Location"></span>
+    <br>
+    <label asp-for="Location"></label>
+    <select asp-for="Location">
+        <option value="San Jose">San Jose</option>
+        <option value="Orange County">Orange County</option>
+        <option value="Burbank">Burbank</option>
+        <option value="Seattle">Seattle</option>
+    </select>
+
+    <span asp-validation-for="Language"></span>
+    <br>
+    <label asp-for="Language"></label>
+    <select asp-for="Language">
+        <option value="Python">Python</option>
+        <option value="Javascript">Javascript</option>
+        <option value="C#">C#</option>
+    </select>
+
+    <br>        
+    <span asp-validation-for="Comment"></span>
+    <label asp-for="Comment"></label>
+    <br>
+    <textarea asp-for="Comment" cols="30" rows="10"></textarea>
+    <br>
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
